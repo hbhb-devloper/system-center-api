@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,27 +22,27 @@ public class SysUser implements Serializable {
 
     private Integer id;
 
-    @ApiModelProperty("归属单位id")
+    @Schema(description = "归属单位id")
     private Integer unitId;
-    @ApiModelProperty("默认归属单位id")
+    @Schema(description = "默认归属单位id")
     private Integer defaultUnitId;
-    @ApiModelProperty("登录账号")
+    @Schema(description = "登录账号")
     private String userName;
-    @ApiModelProperty("用户姓名")
+    @Schema(description = "用户姓名")
     private String nickName;
-    @ApiModelProperty("密码")
+    @Schema(description = "密码")
     private String pwd;
-    @ApiModelProperty("手机号")
+    @Schema(description = "手机号")
     private String phone;
-    @ApiModelProperty("邮箱")
+    @Schema(description = "邮箱")
     private String email;
-    @ApiModelProperty("职务")
+    @Schema(description = "职务")
     private String jobName;
-    @ApiModelProperty("工号")
+    @Schema(description = "工号")
     private String jobNum;
-    @ApiModelProperty("备注")
+    @Schema(description = "备注")
     private String remark;
-    @ApiModelProperty("状态（0-停用、1-启用）")
+    @Schema(description = "状态（0-停用、1-启用）")
     private Byte state;
 
     private Date createTime;
@@ -56,12 +56,12 @@ public class SysUser implements Serializable {
     /**
      * 用户所对应的rs角色id
      */
-    @ApiModelProperty("RS角色")
+    @Schema(description = "RS角色")
     private List<Integer> checkedRsRoleIds;
 
     /**
      * 用户所对应的un角色id
      */
-    @ApiModelProperty("UN角色")
+    @Schema(description = "UN角色")
     private List<Integer> checkedUnRoleIds;
 }

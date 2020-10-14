@@ -1,51 +1,29 @@
 package com.hbhb.cw.systemcenter.model;
 
+import org.beetl.sql.annotation.entity.AutoID;
+import org.beetl.sql.fetch.annotation.Fetch;
+import org.beetl.sql.fetch.annotation.FetchSql;
+
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import lombok.Data;
 
-/**
- * @author dxk
- */
 @Data
+@Fetch
 public class SysResource implements Serializable {
     private static final long serialVersionUID = -6628686180184947562L;
+    @AutoID
     private Integer id;
-
-    private String rsName;
-
-    private String rsType;
-
-    private Integer parentId;
-
-    private Integer orderNum;
-
-    private String path;
-
-    private String perms;
-
-    private String component;
-
-    private Byte isFrame;
-
-    private Byte visible;
-
-    private String icon;
-
-    private String target;
-
-    private String remark;
-
+    private String name;
+    private String perm;
+    private String apiPath;
+    private String desc;
     private Date createTime;
-
-    private String createBy;
-
-    private Date updateTime;
-
-    private String updateBy;
-
-    private List<SysResource> children = new ArrayList<>();
+    /**
+     * todo 优化
+     */
+    @FetchSql("select role_id from sys_role_resource where resource_id = #{id}")
+    private List<String> roleIds;
 }

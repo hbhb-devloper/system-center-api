@@ -6,8 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,29 +19,28 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel("角色")
 public class SysRole implements Serializable {
     private static final long serialVersionUID = -7604131444946608894L;
 
-    @ApiModelProperty("角色id")
+    @Schema(description = "角色id")
     private Integer id;
 
-    @ApiModelProperty("角色名称")
+    @Schema(description = "角色名称")
     private String roleName;
 
-    @ApiModelProperty("角色key")
+    @Schema(description = "角色key")
     private String roleKey;
 
-    @ApiModelProperty("角色类型（RS-关联资源、UN-关联单位）")
+    @Schema(description = "角色类型（RS-关联资源、UN-关联单位）")
     private String roleType;
 
-    @ApiModelProperty("排序编号")
+    @Schema(description = "排序编号")
     private Integer sortNum;
 
-    @ApiModelProperty("角色状态（0-删除、1-正常、2-停用）")
+    @Schema(description = "角色状态（0-删除、1-正常、2-停用）")
     private Byte state;
 
-    @ApiModelProperty("角色id")
+    @Schema(description = "角色id")
     private String remark;
 
     private Date createTime;

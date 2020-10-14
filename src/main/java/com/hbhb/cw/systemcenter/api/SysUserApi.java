@@ -1,15 +1,16 @@
 package com.hbhb.cw.systemcenter.api;
 
 import com.hbhb.cw.systemcenter.model.SysUser;
+import com.hbhb.cw.systemcenter.vo.SysUserInfo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Set;
+import java.util.List;
 
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * @author xiaokang
@@ -17,11 +18,19 @@ import io.swagger.annotations.ApiParam;
  */
 public interface SysUserApi {
 
-    @ApiOperation("根据登录名获取用户详情")
-    @GetMapping("/info")
-    SysUser getUserByName(@ApiParam(value = "登录名", required = true) @RequestParam String userName);
+    @Operation(summary = "根据用户id获取用户的基本信息")
+    @GetMapping("/{userId}")
+    SysUserInfo getUserById(@Schema(description = "用户id", required = true) @PathVariable Integer userId);
 
-    @ApiOperation("获取用户的所有权限")
+    @Operation(summary = "根据登录名获取用户详情")
+    @GetMapping("/info")
+    SysUser getUserByName(@Schema(description = "登录名", required = true) @RequestParam String userName);
+
+    @Operation(summary = "获取用户所有角色")
+    @GetMapping("/{userId}/roles")
+    List<Integer> getUserRoles(@Schema(description = "用户id", required = true) @PathVariable Integer userId);
+
+    @Operation(summary = "获取用户所有权限")
     @GetMapping("/{userId}/permissions")
-    Set<String> getUserAllPerms(@ApiParam(value = "用户id", required = true) @PathVariable Integer userId);
+    List<String> getUserPerms(@Schema(description = "用户id", required = true) @PathVariable Integer userId);
 }
