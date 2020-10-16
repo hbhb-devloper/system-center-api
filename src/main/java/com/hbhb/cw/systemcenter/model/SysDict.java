@@ -1,5 +1,7 @@
 package com.hbhb.cw.systemcenter.model;
 
+import org.beetl.sql.annotation.entity.AutoID;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -17,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SysDict implements Serializable {
     private static final long serialVersionUID = 5853187740251669853L;
-
+    @AutoID
     private Integer id;
     @Schema(description = "字典类型id")
     private Integer dictTypeId;

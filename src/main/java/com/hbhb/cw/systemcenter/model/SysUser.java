@@ -1,5 +1,7 @@
 package com.hbhb.cw.systemcenter.model;
 
+import org.beetl.sql.annotation.entity.AutoID;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -19,9 +21,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SysUser implements Serializable {
     private static final long serialVersionUID = -5603529394240080938L;
-
+    @AutoID
     private Integer id;
-
     @Schema(description = "归属单位id")
     private Integer unitId;
     @Schema(description = "默认归属单位id")
