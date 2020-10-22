@@ -16,14 +16,14 @@ import java.util.List;
 public interface SysUserApi {
 
     @GetMapping("/{userId}")
-    SysUserInfo getUserById(@PathVariable Integer userId);
+    SysUserInfo getUserById(@PathVariable("userId") Integer userId);
 
     @GetMapping("/info")
-    SysUser getUserByName(@RequestParam String userName);
+    SysUser getUserByName(@RequestParam("userName") String userName);
 
     @GetMapping("/{userId}/roles")
-    List<Integer> getUserRoles(@PathVariable Integer userId);
+    List<Integer> getUserRoles(@PathVariable("userId") Integer userId);
 
     @GetMapping("/{userId}/permissions")
-    List<String> getUserPerms(@PathVariable Integer userId);
+    List<String> getUserPerms(@PathVariable("userId") Integer userId);
 }
