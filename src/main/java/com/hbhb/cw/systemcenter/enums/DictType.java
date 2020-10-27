@@ -25,6 +25,11 @@ public enum DictType {
      * 功能模块
      */
     MODULE("module"),
+
+    /**
+     * 迁改
+     */
+    RELOCATION("relocation"),
     ;
 
 
