@@ -42,7 +42,13 @@ public enum DictCode {
     /**
      * 流程维护-流程节点属性-
      */
-    FLOW_NODE_PROP_ENABLE_COND("enable_cond");
+    FLOW_NODE_PROP_ENABLE_COND("enable_cond"),
+
+    /**
+     * 迁改-赔补状态
+     */
+    RELOCATION_PROJECT_COMPENSATION("compensation_sate"),
+    ;
 
     private final String value;
 

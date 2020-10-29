@@ -3,15 +3,8 @@ package com.hbhb.cw.systemcenter.api;
 import com.hbhb.cw.systemcenter.model.SysDict;
 import com.hbhb.cw.systemcenter.vo.SysDictResVO;
 import com.hbhb.cw.systemcenter.vo.SysDictVO;
-
 import org.beetl.sql.core.page.PageResult;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,13 +15,13 @@ import java.util.List;
 public interface SysDictApi {
 
     @GetMapping("/list")
-    PageResult<SysDictResVO> getDictList(@RequestParam(value = "pageNum", required = false) Long pageNum,
-                                         @RequestParam(required = false) Integer pageSize,
-                                         @RequestParam(required = false) String dictTypeName,
-                                         @RequestParam(required = false) String dictLabel);
+    PageResult<SysDictResVO> getDictList(@RequestParam(value = "pageNum",required = false) Long pageNum,
+                                         @RequestParam(value = "pageSize",required = false) Integer pageSize,
+                                         @RequestParam(value = "dictTypeName",required = false) String dictTypeName,
+                                         @RequestParam(value = "dictLabel",required = false) String dictLabel);
 
     @GetMapping("/info/{id}")
-    SysDict getDictInfo(@PathVariable Integer id);
+    SysDict getDictInfo(@PathVariable("id") Integer id);
 
     @PostMapping("")
     void saveDict(@RequestBody SysDict sysDict);
@@ -37,7 +30,7 @@ public interface SysDictApi {
     void updateDict(@RequestBody SysDict sysDict);
 
     @DeleteMapping("/{id}")
-    void deleteDict(@PathVariable Integer id);
+    void deleteDict(@PathVariable("id") Integer id);
 
     @GetMapping("/module")
     List<SysDictVO> getModuleList();
@@ -50,4 +43,9 @@ public interface SysDictApi {
 
     @GetMapping("/budget/project-vat-rate")
     List<SysDictVO> getProjectVatRate();
+
+    @GetMapping("/relocation/compensation_sate")
+    List<SysDictVO> getCompensationSate();
+
+
 }
