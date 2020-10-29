@@ -22,7 +22,7 @@ import java.util.List;
 public interface SysDictApi {
 
     @GetMapping("/list")
-    PageResult<SysDictResVO> getDictList(@RequestParam(required = false) Long pageNum,
+    PageResult<SysDictResVO> getDictList(@RequestParam(value = "pageNum", required = false) Long pageNum,
                                          @RequestParam(required = false) Integer pageSize,
                                          @RequestParam(required = false) String dictTypeName,
                                          @RequestParam(required = false) String dictLabel);
