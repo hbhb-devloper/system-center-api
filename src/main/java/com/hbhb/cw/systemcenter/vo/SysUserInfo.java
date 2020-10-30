@@ -27,4 +27,6 @@ public class SysUserInfo implements Serializable {
     private String nickName;
     @Schema(description = "用户权限集合")
     private List<String> perms;
+    @Schema(description = "用户单位id")
+    private Integer unitId;
 }
