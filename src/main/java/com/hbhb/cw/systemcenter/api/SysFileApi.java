@@ -14,9 +14,13 @@ import java.util.List;
  * @since 2020-10-28
  */
 public interface SysFileApi {
-    @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    List<FileDetailVO> uploadFile(@RequestPart("files") MultipartFile[] files,
+    @PostMapping(value = "/upload-list", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    List<FileDetailVO> uploadFileList(@RequestPart("files") MultipartFile[] files,
                                   @RequestParam(value = "bizType", required = false) Integer bizType);
+
+    @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    FileDetailVO uploadFile(@RequestPart("file") MultipartFile file,
+                                      @RequestParam(value = "bizType", required = false) Integer bizType);
 
     @GetMapping("/list")
     List<FileResVO> list(@RequestParam(value = "bizType", required = false) Integer bizType);
