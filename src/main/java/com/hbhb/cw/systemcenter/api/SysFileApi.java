@@ -1,5 +1,6 @@
 package com.hbhb.cw.systemcenter.api;
 
+import com.hbhb.cw.systemcenter.model.SysFile;
 import com.hbhb.cw.systemcenter.vo.FileDetailVO;
 import com.hbhb.cw.systemcenter.vo.FileResVO;
 import org.springframework.http.MediaType;
@@ -16,14 +17,14 @@ import java.util.List;
 public interface SysFileApi {
     @PostMapping(value = "/upload-list", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     List<FileDetailVO> uploadFileList(@RequestPart("files") MultipartFile[] files,
-                                  @RequestParam(value = "bizType", required = false) Integer bizType);
+                                      @RequestParam("bizType") Integer bizType);
 
     @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     FileDetailVO uploadFile(@RequestPart("file") MultipartFile file,
-                                      @RequestParam(value = "bizType", required = false) Integer bizType);
+                            @RequestParam("bizType") Integer bizType);
 
     @GetMapping("/list")
-    List<FileResVO> list(@RequestParam(value = "bizType", required = false) Integer bizType);
+    List<FileResVO> list(@RequestParam("bizType") Integer bizType);
 
     @DeleteMapping("/delete")
     void deleteFile(@PathVariable("id") Long id);
@@ -31,5 +32,14 @@ public interface SysFileApi {
 
     @DeleteMapping("/remove")
     void remove(@RequestBody File file);
+
+    /**
+     * 批量获取文件信息
+     *
+     * @param fileIds 文件id列表
+     * @return 文件详情列表
+     */
+    @GetMapping("/file-list")
+    List<SysFile> getFileList(@RequestParam("fileIds") List<Integer> fileIds);
 
 }
