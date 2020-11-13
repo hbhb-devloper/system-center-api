@@ -42,4 +42,12 @@ public interface SysFileApi {
     @GetMapping("/file-list")
     List<SysFile> getFileList(@RequestParam("fileIds") List<Integer> fileIds);
 
+    /**
+     * 获取模板文件地址
+     *
+     * @return 模板文件地址
+     */
+    @GetMapping("/file-template")
+    String getFileTemplatePath();
+
 }
