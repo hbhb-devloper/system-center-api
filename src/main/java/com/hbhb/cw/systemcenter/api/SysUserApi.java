@@ -2,7 +2,7 @@ package com.hbhb.cw.systemcenter.api;
 
 import com.hbhb.cw.systemcenter.model.SysUser;
 import com.hbhb.cw.systemcenter.vo.SysUserInfo;
-
+import com.hbhb.cw.systemcenter.vo.SysUserVO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,4 +26,7 @@ public interface SysUserApi {
 
     @GetMapping("/{userId}/permissions")
     List<String> getUserPerms(@PathVariable("userId") Integer userId);
+
+    @GetMapping("/user-list")
+    List<SysUserVO> getUserList(@RequestParam("userIds") List<Integer> userId);
 }
