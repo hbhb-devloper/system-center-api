@@ -1,6 +1,7 @@
 package com.hbhb.cw.systemcenter.api;
 
 import com.hbhb.cw.systemcenter.model.Unit;
+import com.hbhb.cw.systemcenter.vo.ParentVO;
 import com.hbhb.cw.systemcenter.vo.SelectInputVO;
 import com.hbhb.cw.systemcenter.vo.TreeSelectVO;
 import org.springframework.web.bind.annotation.*;
@@ -32,4 +33,7 @@ public interface UnitApi {
 
     @GetMapping("/short-name/list")
     List<SelectInputVO> getShortName();
+
+    @GetMapping("/parent-unit")
+    ParentVO getParentUnit();
 }
