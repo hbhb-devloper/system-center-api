@@ -1,23 +1,25 @@
 package com.hbhb.cw.systemcenter.vo;
 
+import java.io.Serializable;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * @author wangxiaogang
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ParentVO implements Serializable {
+public class UnitTopVO implements Serializable {
     private static final long serialVersionUID = 4254909197912507502L;
 
-    @Schema(description = "杭州")
+    @Schema(description = "杭州id")
     private Integer hangzhou;
-    @Schema(description = "本部")
+    @Schema(description = "本部id")
     private Integer benbu;
 }

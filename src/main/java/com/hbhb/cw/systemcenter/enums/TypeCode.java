@@ -4,7 +4,7 @@ package com.hbhb.cw.systemcenter.enums;
  * @author dxk
  */
 
-public enum DictType {
+public enum TypeCode {
 
     /**
      * 发票
@@ -35,7 +35,7 @@ public enum DictType {
 
     private final String value;
 
-    DictType(String value) {
+    TypeCode(String value) {
         this.value = value;
     }
 

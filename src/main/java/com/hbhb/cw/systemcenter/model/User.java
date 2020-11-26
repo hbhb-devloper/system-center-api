@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SysUser implements Serializable {
+public class User implements Serializable {
     private static final long serialVersionUID = -5603529394240080938L;
     @AutoID
     private Integer id;
@@ -45,23 +45,23 @@ public class SysUser implements Serializable {
     private String remark;
     @Schema(description = "状态（0-停用、1-启用）")
     private Byte state;
-
+    @Schema(description = "创建时间")
     private Date createTime;
-
+    @Schema(description = "创建人")
     private Integer createBy;
-
+    @Schema(description = "更新时间")
     private Date updateTime;
-
+    @Schema(description = "更新人")
     private Integer updateBy;
 
     /**
-     * 用户所对应的rs角色id
+     * 用户所对应的资源角色id
      */
     @Schema(description = "RS角色")
     private List<Integer> checkedRsRoleIds;
 
     /**
-     * 用户所对应的un角色id
+     * 用户所对应的单位角色id
      */
     @Schema(description = "UN角色")
     private List<Integer> checkedUnRoleIds;

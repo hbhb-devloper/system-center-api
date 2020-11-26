@@ -1,23 +1,22 @@
 package com.hbhb.cw.systemcenter.vo;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 /**
- * Treeselect树结构实体类
- *
  * @author xiaokang
+ * @since 2020-07-15
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SelectVO implements Serializable {
-    private static final long serialVersionUID = 1004230475567244162L;
-    private Long id;
+public class DictVO implements Serializable {
+    private static final long serialVersionUID = 4468558253266545161L;
     private String label;
+    private String value;
 }

@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SysRoleResource implements Serializable {
-    private static final long serialVersionUID = -2091516877813507843L;
+public class RoleUnit implements Serializable {
+    private static final long serialVersionUID = -9171901556482510350L;
 
     private Integer roleId;
-    private Integer resourceId;
+    private Integer unitId;
     private Byte isHalf;
 }

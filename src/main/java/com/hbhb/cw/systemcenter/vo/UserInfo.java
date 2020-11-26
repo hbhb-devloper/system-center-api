@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SysUserInfo implements Serializable {
+public class UserInfo implements Serializable {
     private static final long serialVersionUID = 5027768943457113861L;
 
     private Integer id;
@@ -25,8 +25,8 @@ public class SysUserInfo implements Serializable {
     private String userName;
     @Schema(description = "用户姓名")
     private String nickName;
-    @Schema(description = "用户权限集合")
-    private List<String> perms;
     @Schema(description = "用户单位id")
     private Integer unitId;
+    @Schema(description = "用户权限集合")
+    private List<String> perms;
 }

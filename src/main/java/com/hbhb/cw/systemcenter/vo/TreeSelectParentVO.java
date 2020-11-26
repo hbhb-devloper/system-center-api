@@ -1,15 +1,16 @@
 package com.hbhb.cw.systemcenter.vo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.hbhb.cw.systemcenter.model.SysRole;
+import com.hbhb.cw.systemcenter.model.Role;
 import com.hbhb.cw.systemcenter.model.Unit;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author yzc
@@ -33,7 +34,7 @@ public class TreeSelectParentVO implements Serializable {
     /**
      * 角色集合拷贝
      */
-    public TreeSelectParentVO(SysRole role) {
+    public TreeSelectParentVO(Role role) {
         this.id = role.getId();
         this.label = role.getRoleName();
     }
