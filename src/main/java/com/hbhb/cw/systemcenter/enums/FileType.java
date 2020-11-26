@@ -13,8 +13,14 @@ public enum FileType {
      * 客户资金-发票类附件
      */
     FUND_INVOICE_FILE(30),
-
-    ;
+    /**
+     * 迁改-预警类附件
+     */
+    RELOCATION_WARN_FILE(40),
+    /**
+     * 迁改-合同类附件
+     */
+    RELOCATION_CONTRACT_FILE(50);
 
     private final Integer value;
 
