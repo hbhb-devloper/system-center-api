@@ -30,6 +30,11 @@ public enum TypeCode {
      * 迁改
      */
     RELOCATION("relocation"),
+
+    /**
+     * 宣传用品
+     */
+    PUBLICITY("publicity")
     ;
 
 
