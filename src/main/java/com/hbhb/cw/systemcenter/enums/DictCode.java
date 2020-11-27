@@ -28,6 +28,8 @@ public enum DictCode {
     FUND_INVOICE_CONTENT("invoice_content","客户资金-发票预开-开票内容"),
     FUND_INVOICE_BUSINESS("business","客户资金-发票预开-办理业务"),
     FUND_INVOICE_STATUS("invoice_status","客户资金-发票预开-流程状态"),
+
+    MODULE("module","系统模块-"),
     ;
 
     private final String value;
