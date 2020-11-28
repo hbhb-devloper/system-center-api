@@ -2,7 +2,6 @@ package com.hbhb.cw.systemcenter.api;
 
 import com.hbhb.cw.systemcenter.model.File;
 import com.hbhb.cw.systemcenter.vo.FileVO;
-
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +27,9 @@ public interface FileApi {
 
     @GetMapping("/info/batch")
     List<File> getFileInfo(@RequestParam("fileIds") List<Integer> fileIds);
+
+    @GetMapping("/info")
+    File getFile(@RequestParam("fileId") Integer fileId);
 
     @GetMapping("/template-path")
     String getFileTemplatePath();
