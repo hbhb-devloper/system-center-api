@@ -32,6 +32,11 @@ public enum TypeCode {
     RELOCATION("relocation"),
 
     /**
+     * 客户资金
+     */
+    FUND("fund"),
+
+    /**
      * 宣传用品
      */
     PUBLICITY("publicity")

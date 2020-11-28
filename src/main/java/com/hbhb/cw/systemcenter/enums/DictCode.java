@@ -12,7 +12,7 @@ public enum DictCode {
     INVOICE_TYPE_COMMON("type_common", "发票-种类-增值税普通发票"),
     INVOICE_PROJECT_PROPERTIES("project_properties", "发票-项目属性-专票1、3、6"),
     INVOICE_TAX_TYPE("tax_type","渠道发票增值税率"),
-    TAXPAYER_CREDENTIALS("taxpayer_credentials","渠道发票-渠道纳税人资质库-纳税人资质"),
+    INVOICE_TAXPAYER_CREDENTIALS("taxpayer_credentials","渠道发票-渠道纳税人资质库-纳税人资质"),
 
 
     BUDGET_PROJECT_STATUS("project_status", "预算-项目签报-审批状态"),
