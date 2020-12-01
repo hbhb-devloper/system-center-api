@@ -23,8 +23,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Role implements Serializable {
     private static final long serialVersionUID = -7604131444946608894L;
+
     @AutoID
-    @Schema(description = "角色id")
     private Integer id;
     @Schema(description = "角色名称")
     private String roleName;
