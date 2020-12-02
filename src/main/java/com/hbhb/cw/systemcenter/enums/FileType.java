@@ -6,7 +6,7 @@ public enum FileType {
      */
     SYSTEM_FILE(10),
     /**
-     * 预算项目签报类型文件
+     * 预算执行-签报类附件
      */
     BUDGET_PROJECT_FILE(20),
     /**
