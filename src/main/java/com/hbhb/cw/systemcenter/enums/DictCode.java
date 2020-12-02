@@ -23,13 +23,14 @@ public enum DictCode {
     FLOW_NODE_PROP_ENABLE_COND("enable_cond", "流程维护-流程节点属性"),
 
     RELOCATION_PROJECT_COMPENSATION("compensation_sate", "迁改-赔补状态"),
+    RELOCATION_INVOICE_TYPE("invoice_type", "迁改-收款发票类型"),
 
-    FUND_BUSINESS_TYPE("business_type","客户资金-发票预开-开票内容"),
-    FUND_INVOICE_CONTENT("invoice_content","客户资金-发票预开-开票内容"),
-    FUND_INVOICE_BUSINESS("business","客户资金-发票预开-办理业务"),
-    FUND_INVOICE_STATUS("invoice_status","客户资金-发票预开-流程状态"),
+    FUND_BUSINESS_TYPE("business_type", "客户资金-发票预开-开票内容"),
+    FUND_INVOICE_CONTENT("invoice_content", "客户资金-发票预开-开票内容"),
+    FUND_INVOICE_BUSINESS("business", "客户资金-发票预开-办理业务"),
+    FUND_INVOICE_STATUS("invoice_status", "客户资金-发票预开-流程状态"),
 
-    MODULE("module","系统模块-"),
+    MODULE("module", "系统模块-"),
     ;
 
     private final String value;
