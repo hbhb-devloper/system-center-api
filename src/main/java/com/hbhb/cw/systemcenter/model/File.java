@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class File implements Serializable {
     private static final long serialVersionUID = 7602034277516492512L;
+
     @AutoID
     private Long id;
     @Schema(description = "文件名称")

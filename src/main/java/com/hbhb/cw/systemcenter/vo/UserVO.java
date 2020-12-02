@@ -1,6 +1,7 @@
 package com.hbhb.cw.systemcenter.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -19,10 +20,12 @@ public class UserVO implements Serializable {
     private static final long serialVersionUID = 812218807524598920L;
 
     private Integer id;
+    @Schema(description = "登录账号")
+    private String userName;
     @Schema(description = "用户姓名")
     private String nickName;
-    @Schema(description = "单位id")
+    @Schema(description = "用户单位id")
     private Integer unitId;
-    @Schema(description = "邮箱")
-    private String email;
+    @Schema(description = "用户权限集合")
+    private List<String> perms;
 }

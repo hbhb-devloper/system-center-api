@@ -21,6 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class User implements Serializable {
     private static final long serialVersionUID = -5603529394240080938L;
+
     @AutoID
     private Integer id;
     @Schema(description = "归属单位id")
@@ -54,15 +55,8 @@ public class User implements Serializable {
     @Schema(description = "更新人")
     private Integer updateBy;
 
-    /**
-     * 用户所对应的资源角色id
-     */
-    @Schema(description = "RS角色")
+    @Schema(description = "RS角色-用户所对应的资源角色id")
     private List<Integer> checkedRsRoleIds;
-
-    /**
-     * 用户所对应的单位角色id
-     */
-    @Schema(description = "UN角色")
+    @Schema(description = "UN角色-用户所对应的单位角色id")
     private List<Integer> checkedUnRoleIds;
 }

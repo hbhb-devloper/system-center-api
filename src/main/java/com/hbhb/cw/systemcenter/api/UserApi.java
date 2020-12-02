@@ -1,8 +1,6 @@
 package com.hbhb.cw.systemcenter.api;
 
-import com.hbhb.cw.systemcenter.model.User;
 import com.hbhb.cw.systemcenter.vo.UserInfo;
-import com.hbhb.cw.systemcenter.vo.UserVO;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,18 +14,18 @@ import java.util.List;
  */
 public interface UserApi {
 
-    @GetMapping("/{userId}")
-    UserInfo getUserById(@PathVariable("userId") Integer userId);
+    @GetMapping("/info-by-id")
+    UserInfo getUserInfoById(@RequestParam("userId") Integer userId);
 
-    @GetMapping("/info")
-    User getUserByName(@RequestParam("userName") String userName);
+    @GetMapping("/info-by-name")
+    UserInfo getUserInfoByName(@RequestParam("userName") String userName);
+
+    @GetMapping("/info/batch")
+    List<UserInfo> getUserInfoBatch(@RequestParam("userIds") List<Integer> userIds);
 
     @GetMapping("/{userId}/roles")
     List<Integer> getUserRoles(@PathVariable("userId") Integer userId);
 
-    @GetMapping("/{userId}/permissions")
-    List<String> getUserPerms(@PathVariable("userId") Integer userId);
-
-    @GetMapping("/list")
-    List<UserVO> getUserList(@RequestParam("userIds") List<Integer> userId);
+    @GetMapping("/{userId}/is-admin")
+    Boolean isAdmin(@PathVariable("userId") Integer userId);
 }
