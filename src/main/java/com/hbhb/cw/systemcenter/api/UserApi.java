@@ -15,7 +15,7 @@ import java.util.List;
 public interface UserApi {
 
     @GetMapping("/info-by-id")
-    UserInfo getUserInfoById(@PathVariable("userId") Integer userId);
+    UserInfo getUserInfoById(@RequestParam("userId") Integer userId);
 
     @GetMapping("/info-by-name")
     UserInfo getUserInfoByName(@RequestParam("userName") String userName);
