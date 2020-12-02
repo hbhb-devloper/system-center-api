@@ -20,11 +20,11 @@ public interface UserApi {
     @GetMapping("/info-by-name")
     UserInfo getUserInfoByName(@RequestParam("userName") String userName);
 
+    @GetMapping("/info/batch")
+    List<UserInfo> getUserInfoBatch(@RequestParam("userIds") List<Integer> userIds);
+
     @GetMapping("/{userId}/roles")
     List<Integer> getUserRoles(@PathVariable("userId") Integer userId);
-
-    @GetMapping("/batch-query")
-    List<UserInfo> getUserInfoList(@RequestParam("userIds") List<Integer> userIds);
 
     @GetMapping("/{userId}/is-admin")
     Boolean isAdmin(@PathVariable("userId") Integer userId);
