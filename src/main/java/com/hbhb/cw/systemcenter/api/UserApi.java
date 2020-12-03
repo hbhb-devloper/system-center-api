@@ -20,7 +20,7 @@ public interface UserApi {
     @GetMapping("/info-by-name")
     UserInfo getUserInfoByName(@RequestParam("userName") String userName);
 
-    @GetMapping("/info/batch")
+    @GetMapping("/info-by-id/batch")
     List<UserInfo> getUserInfoBatch(@RequestParam("userIds") List<Integer> userIds);
 
     @GetMapping("/{userId}/roles")
