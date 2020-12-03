@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author xiaokang
@@ -28,4 +29,7 @@ public interface UserApi {
 
     @GetMapping("/{userId}/is-admin")
     Boolean isAdmin(@PathVariable("userId") Integer userId);
+
+    @GetMapping("/permission")
+    Set<String> getUserPermission(Integer userId, List<String> types);
 }
