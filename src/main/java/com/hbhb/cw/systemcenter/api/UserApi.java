@@ -31,5 +31,6 @@ public interface UserApi {
     Boolean isAdmin(@PathVariable("userId") Integer userId);
 
     @GetMapping("/permission")
-    Set<String> getUserPermission(Integer userId, List<String> types);
+    Set<String> getUserPermission(@RequestParam("userId") Integer userId,
+                                  @RequestParam("types") List<String> types);
 }
