@@ -18,7 +18,10 @@ public interface UnitApi {
     Map<Integer, String> getUnitMapById();
 
     @GetMapping("/map/unit-name")
-    Map<String, Integer> getUnitMapByName();
+    Map<String, Integer> getUnitMapByUnitName();
+
+    @GetMapping("/map/short-name")
+    Map<String, Integer> getUnitMapByShortName();
 
     @GetMapping("/map/abbr")
     Map<String, Integer> getUnitMapByAbbr();
