@@ -37,8 +37,4 @@ public interface UserApi {
     @GetMapping("/permission")
     Set<String> getUserPermission(@RequestParam("userId") Integer userId,
                                   @RequestParam("types") List<String> types);
-
-    @GetMapping("/check/unit")
-    Boolean checkUnitRole(@RequestParam("userId") Integer userId,
-                          @RequestParam("unitId") Integer unitId);
 }
