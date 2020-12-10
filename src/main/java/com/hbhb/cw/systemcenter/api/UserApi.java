@@ -26,7 +26,7 @@ public interface UserApi {
     List<UserInfo> getUserInfoBatch(@RequestParam("userIds") List<Integer> userIds);
 
     @GetMapping("/map/id")
-    Map<Integer, String> getUserMapById();
+    Map<Integer, String> getUserMapById(@RequestParam(value = "userIds", required = false) List<Integer> userIds);
 
     @GetMapping("/{userId}/roles")
     List<Integer> getUserRoles(@PathVariable("userId") Integer userId);
