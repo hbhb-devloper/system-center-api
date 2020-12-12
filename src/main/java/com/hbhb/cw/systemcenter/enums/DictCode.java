@@ -31,6 +31,7 @@ public enum DictCode {
     FUND_INVOICE_STATUS("invoice_status", "客户资金-发票预开-流程状态"),
 
     PUBLICITY_APPLICATION_DETAIL_STATE("application_detail_state","宣传用品-申领详情-审核状态"),
+    PUBLICITY_GOODS_TYPE("goods_type","宣传用品-物料类型"),
 
     MODULE("module", "系统模块"),
     ;
