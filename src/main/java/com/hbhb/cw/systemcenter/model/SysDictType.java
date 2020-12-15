@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DictType implements Serializable {
+public class SysDictType implements Serializable {
     private static final long serialVersionUID = 3534456777087071154L;
 
     @AutoID

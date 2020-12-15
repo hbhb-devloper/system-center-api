@@ -25,13 +25,15 @@ public enum DictCode {
     RELOCATION_PROJECT_COMPENSATION("compensation_sate", "迁改-赔补状态"),
     RELOCATION_INVOICE_TYPE("invoice_type", "迁改-收款发票类型"),
 
-    FUND_BUSINESS_TYPE("business_type", "客户资金-发票预开-开票内容"),
+    FUND_BUSINESS_TYPE("business_type", "客户资金-办理业务类型"),
+    FUND_FUND_FLOWS("fund_flows", "客户资金-资金流向"),
+    FUND_AMOUNT_TYPE("amount_type", "客户资金-款项类型"),
     FUND_INVOICE_CONTENT("invoice_content", "客户资金-发票预开-开票内容"),
-    FUND_INVOICE_BUSINESS("business", "客户资金-发票预开-办理业务"),
+    FUND_INVOICE_BUSINESS("invoice_business", "客户资金-发票预开-办理业务"),
     FUND_INVOICE_STATUS("invoice_status", "客户资金-发票预开-流程状态"),
 
-    PUBLICITY_APPLICATION_DETAIL_STATE("application_detail_state","宣传用品-申领详情-审核状态"),
-    PUBLICITY_GOODS_TYPE("goods_type","宣传用品-物料类型"),
+    PUBLICITY_APPLICATION_DETAIL_STATE("application_detail_state", "宣传用品-申领详情-审核状态"),
+    PUBLICITY_GOODS_TYPE("goods_type", "宣传用品-物料类型"),
 
     MODULE("module", "系统模块"),
     ;

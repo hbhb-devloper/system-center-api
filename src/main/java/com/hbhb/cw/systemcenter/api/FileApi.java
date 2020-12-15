@@ -1,6 +1,6 @@
 package com.hbhb.cw.systemcenter.api;
 
-import com.hbhb.cw.systemcenter.model.File;
+import com.hbhb.cw.systemcenter.model.SysFile;
 import com.hbhb.cw.systemcenter.vo.FileVO;
 
 import org.springframework.http.MediaType;
@@ -42,10 +42,10 @@ public interface FileApi {
                       @RequestParam("filePath") String filePath);
 
     @GetMapping("/info")
-    File getFileInfo(@RequestParam("fileId") Integer fileId);
+    SysFile getFileInfo(@RequestParam("fileId") Integer fileId);
 
     @GetMapping("/info/batch")
-    List<File> getFileInfoBatch(@RequestParam("fileIds") List<Integer> fileIds);
+    List<SysFile> getFileInfoBatch(@RequestParam("fileIds") List<Integer> fileIds);
 
     @GetMapping("/path")
     String getPath();

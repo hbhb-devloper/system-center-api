@@ -1,7 +1,6 @@
 package com.hbhb.cw.systemcenter.model;
 
 import org.beetl.sql.annotation.entity.AutoID;
-import org.beetl.sql.annotation.entity.Table;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,7 +11,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
-@Table(name = "resource")
 public class SysResource implements Serializable {
     private static final long serialVersionUID = -6628686180184947562L;
 
