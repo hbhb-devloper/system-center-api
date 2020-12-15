@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Maintain implements Serializable {
+public class SysMaintain implements Serializable {
     private static final long serialVersionUID = 8170873788235861933L;
 
     @AutoID

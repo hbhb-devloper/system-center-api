@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Broadcast implements Serializable {
+public class SysBroadcast implements Serializable {
     private static final long serialVersionUID = -2967992542095864782L;
 
     @AutoID
