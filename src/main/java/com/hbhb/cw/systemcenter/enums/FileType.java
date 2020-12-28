@@ -20,7 +20,19 @@ public enum FileType {
     /**
      * 迁改-合同类附件
      */
-    RELOCATION_CONTRACT_FILE(50);
+    RELOCATION_CONTRACT_FILE(50),
+    /**
+     * 宣传管理-印刷品附件
+     */
+    PUBLICITY_PRINT_FILE(60),
+    /**
+     * 宣传管理-画面设计
+     */
+    PUBLICITY_PICTURE_FILE(61),
+    /**
+     * 宣传管理-物料制作
+     */
+    PUBLICITY_MATERIALS_FILE(62);
 
     private final Integer value;
 
