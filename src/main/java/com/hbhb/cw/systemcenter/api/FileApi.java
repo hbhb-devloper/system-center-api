@@ -47,6 +47,9 @@ public interface FileApi {
     @GetMapping("/info/batch")
     List<SysFile> getFileInfoBatch(@RequestParam("fileIds") List<Integer> fileIds);
 
+    @GetMapping("/domain")
+    String getDomain();
+
     @GetMapping("/path")
     String getPath();
 
