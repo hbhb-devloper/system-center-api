@@ -25,7 +25,7 @@ public interface FileApi {
 
     @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     FileVO upload(@RequestPart("file") MultipartFile file,
-                  @RequestParam("bizType") Integer bizType);
+                  @RequestParam(value = "bizType", required = false) Integer bizType);
 
     @PostMapping(value = "/upload/batch", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     List<FileVO> uploadBatch(@RequestPart("files") MultipartFile[] files,
