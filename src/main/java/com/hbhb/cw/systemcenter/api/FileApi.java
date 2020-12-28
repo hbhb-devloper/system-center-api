@@ -1,7 +1,7 @@
 package com.hbhb.cw.systemcenter.api;
 
+import com.hbhb.api.core.bean.FileVO;
 import com.hbhb.cw.systemcenter.model.SysFile;
-import com.hbhb.cw.systemcenter.vo.FileVO;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
-
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author xiaokang
@@ -30,11 +28,6 @@ public interface FileApi {
     @PostMapping(value = "/upload/batch", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     List<FileVO> uploadBatch(@RequestPart("files") MultipartFile[] files,
                              @RequestParam("bizType") Integer bizType);
-
-    @GetMapping("/download")
-    void download(HttpServletResponse response,
-                  @RequestParam("filePath") String filePath,
-                  @RequestParam(value = "deleteFile", required = false) Boolean deleteFile);
 
     @PostMapping("/fill-template")
     void fillTemplate(@RequestBody Object data,
