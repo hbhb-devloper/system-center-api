@@ -19,7 +19,11 @@ public enum Module {
     /**
      * 迁改模块
      */
-    MODULE_RELOCATION(102);
+    MODULE_RELOCATION(102),
+    /**
+     * 宣传用品模块
+     */
+    MODULE_PUBLICITY(103);
 
     private final Integer value;
 
