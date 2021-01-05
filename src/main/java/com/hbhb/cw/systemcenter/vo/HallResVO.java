@@ -1,7 +1,5 @@
 package com.hbhb.cw.systemcenter.vo;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -20,7 +18,6 @@ public class HallResVO implements Serializable {
     private static final long serialVersionUID = -8724730020166232595L;
 
     private Integer id;
-    @JsonIgnore
     @Schema(description = "所属分公司id")
     private Integer unitId;
     @Schema(description = "所属分公司名称")
