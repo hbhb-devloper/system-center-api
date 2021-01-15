@@ -1,5 +1,6 @@
 package com.hbhb.cw.systemcenter.model;
 
+import com.hbhb.cw.systemcenter.vo.CheckBoxVO;
 import org.beetl.sql.annotation.entity.AutoID;
 
 import java.io.Serializable;
@@ -58,5 +59,5 @@ public class SysUser implements Serializable {
     @Schema(description = "RS角色-用户所对应的资源角色id")
     private List<Integer> checkedRsRoleIds;
     @Schema(description = "UN角色-用户所对应的单位角色id")
-    private List<Integer> checkedUnRoleIds;
+    private List<CheckBoxVO> checkedUnRoleIds;
 }
