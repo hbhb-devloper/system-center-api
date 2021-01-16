@@ -59,5 +59,7 @@ public class SysUser implements Serializable {
     @Schema(description = "RS角色-用户所对应的资源角色id")
     private List<Integer> checkedRsRoleIds;
     @Schema(description = "UN角色-用户所对应的单位角色id")
-    private List<CheckBoxVO> checkedUnRoleIds;
+    private List<Integer> checkedUnRoleIds;
+    @Schema(description = "UN角色-用户所对应的单位id")
+    private List<Integer> checkedUintIds;
 }
