@@ -8,6 +8,6 @@ import java.util.Map;
 public interface HallApi {
 
     @GetMapping("/selectHallByUnitId")
-    Map<Long,String> selectHallByUnitId(@RequestParam("unitId") Integer unitId);
+    Map<Integer,String> selectHallByUnitId(@RequestParam("unitId") Integer unitId);
 
 }
