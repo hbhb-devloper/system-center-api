@@ -39,7 +39,12 @@ public enum TypeCode {
     /**
      * 宣传用品
      */
-    PUBLICITY("publicity")
+    PUBLICITY("publicity"),
+
+    /**
+     * 报表管理
+     */
+    REPORT("report")
     ;
 
 
