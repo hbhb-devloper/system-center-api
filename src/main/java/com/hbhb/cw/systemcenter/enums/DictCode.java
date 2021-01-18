@@ -36,6 +36,8 @@ public enum DictCode {
     PUBLICITY_GOODS_TYPE("goods_type", "宣传用品-物料类型"),
 
     MODULE("module", "系统模块"),
+
+    REPORT_PERIOD("report","报表周期"),
     ;
 
     private final String value;
