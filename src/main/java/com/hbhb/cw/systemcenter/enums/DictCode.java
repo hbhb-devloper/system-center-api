@@ -37,7 +37,7 @@ public enum DictCode {
 
     MODULE("module", "系统模块"),
 
-    REPORT_PERIOD("report","报表周期"),
+    REPORT_PERIOD("report_period","报表周期"),
     ;
 
     private final String value;
