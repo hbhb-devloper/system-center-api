@@ -32,7 +32,11 @@ public enum FileType {
     /**
      * 宣传管理-物料制作
      */
-    PUBLICITY_MATERIALS_FILE(62);
+    PUBLICITY_MATERIALS_FILE(62),
+    /**
+     * 报表管理
+     */
+    REPORT_FILE(70),;
 
     private final Integer value;
 
