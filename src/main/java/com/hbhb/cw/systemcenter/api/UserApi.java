@@ -37,4 +37,7 @@ public interface UserApi {
     @GetMapping("/permission")
     Set<String> getUserPermission(@RequestParam("userId") Integer userId,
                                   @RequestParam("types") List<String> types);
+
+    @GetMapping("/list-by-unitIds")
+    Map<Integer,String> getUserByUnitIds(@RequestParam(value = "unitId", required = false) Integer unitId);
 }

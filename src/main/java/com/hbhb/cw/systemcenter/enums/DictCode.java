@@ -38,6 +38,7 @@ public enum DictCode {
     MODULE("module", "系统模块"),
 
     REPORT_PERIOD("report_period","报表周期"),
+    REPORT_APPROVER_STATE("report_approver_state","报表流程状态"),
     ;
 
     private final String value;
