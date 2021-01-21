@@ -23,7 +23,12 @@ public enum Module {
     /**
      * 宣传用品模块
      */
-    MODULE_PUBLICITY(103);
+    MODULE_PUBLICITY(103),
+    /**
+     * 报表管理
+     */
+    MODULE_REPORT(104),
+    ;
 
     private final Integer value;
 
