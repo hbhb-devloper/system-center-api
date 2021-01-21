@@ -1,7 +1,6 @@
 package com.hbhb.cw.systemcenter.api;
 
 import com.hbhb.cw.systemcenter.vo.UserInfo;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -39,5 +38,8 @@ public interface UserApi {
                                   @RequestParam("types") List<String> types);
 
     @GetMapping("/list-by-unitIds")
-    Map<Integer,String> getUserByUnitIds(@RequestParam(value = "unitId", required = false) Integer unitId);
+    Map<Integer, String> getUserByUnitIds(@RequestParam(value = "unitId", required = false) Integer unitId);
+
+    @GetMapping("/map/image")
+    Map<Integer, String> getUserSignature(@RequestParam(value = "userIds", required = false) List<Integer> userIds);
 }
