@@ -39,6 +39,9 @@ public enum DictCode {
 
     REPORT_PERIOD("report_period","报表周期"),
     REPORT_APPROVER_STATE("report_approver_state","报表流程状态"),
+    REPORT_THE_DAYS("report_the_days","旬详细"),
+    REPORT_SEASON("report_season","季详细"),
+    REPORT_HALF_YEAR("report_half_year","半年详细"),
     ;
 
     private final String value;
