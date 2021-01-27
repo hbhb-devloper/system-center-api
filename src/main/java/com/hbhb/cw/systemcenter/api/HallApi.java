@@ -14,6 +14,6 @@ public interface HallApi {
 
 
     @GetMapping("/selectHallByUserId")
-    List<SelectVO> selectHallByUserId(@RequestParam("unitId") Integer userId);
+    List<SelectVO> selectHallByUserId(@RequestParam("userId") Integer userId);
 
 }
