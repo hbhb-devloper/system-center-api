@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SysUserUintHall implements Serializable {
+public class SysUserUnitHall implements Serializable {
 
     private static final long serialVersionUID = 5767344039315276786L;
 
@@ -26,7 +26,7 @@ public class SysUserUintHall implements Serializable {
     /**
      * 菜单ID
      */
-    private Integer uintId;
+    private Integer unitId;
     /**
      * 营业厅ID
      */
