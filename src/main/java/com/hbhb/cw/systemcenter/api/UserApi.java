@@ -1,8 +1,11 @@
 package com.hbhb.cw.systemcenter.api;
 
 import com.hbhb.cw.systemcenter.vo.UserInfo;
+import com.hbhb.cw.systemcenter.vo.UserPasswordVO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -42,4 +45,10 @@ public interface UserApi {
 
     @GetMapping("/map/image")
     Map<Integer, String> getUserSignature(@RequestParam(value = "userIds", required = false) List<Integer> userIds);
+
+    @GetMapping("/user-by-email")
+    UserInfo getUserInfoByEmail(@RequestParam("email") String email);
+
+    @PostMapping("/update-pwd-email")
+    void updatePwd(@RequestBody UserPasswordVO userPasswordVO);
 }
